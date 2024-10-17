@@ -1,18 +1,18 @@
 from django.shortcuts import render, redirect
-from django import TodoForm
+from .forms import TodoForm
 from .models import Todo
 
 # Create your views here.
 
 # Creación de tareas
-def CreateTodoView(request):
+def createTodoView(request):
     form = TodoForm
     if request.method == 'POST':     
         form = TodoForm(request.POST)
         if form.is_valid():    # Validamos los datos del form
             form.save()    # Guardamos el nuevo elemento si es valido
             return redirect('show_url')    # Redireccionamos
-    template_name = 'tododapp/todo.html'    # Pasamos el objeto form en el context
+    template_name = 'todoapp/todo.html'    # Pasamos el objeto form en el context
     context = {'form': form}
     return render(request, template_name, context)
     
@@ -30,13 +30,14 @@ def updateTodoView(request, f_id):
     obj =Todo.objects.get(id=f_id)
     form = TodoForm(instance=obj)
     if request.method == 'POST':
-        form = TodoForm(request.POST, isinstance=obj)
+        form = TodoForm(request.POST, instance=obj)
         if form.is_valid():
             form.save()
             return redirect('show_url')
     template_name = 'todoapp/todo.html'
     context = {'form': form}
     return render(request, template_name, context)
+
     
 # Delete View
 def deleteTodoView(request, f_id):
