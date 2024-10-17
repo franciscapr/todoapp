@@ -31,22 +31,22 @@ python manage.py runserver
 
 ### Estructura del Proyecto
 
-django-crud/
-│
-├── todoproject/
-│   ├── templates/
-│   │   ├── layout.html
-│   │   └── todoapp/
-│   │       ├── todo.html
-│   │       ├── show.html
-│   │       └── confirmation.html
-│   ├── todoapp/
-│   │   ├── forms.py
-│   │   ├── models.py
-│   │   ├── views.py
-│   │   └── urls.py
-│   ├── manage.py
-│   ├── settings.py
+    django-crud/
+    │
+    ├── todoproject/
+    │   ├── templates/
+    │   │   ├── layout.html
+    │   │   └── todoapp/
+    │   │       ├── todo.html
+    │   │       ├── show.html
+    │   │       └── confirmation.html
+    │   ├── todoapp/
+    │   │   ├── forms.py
+    │   │   ├── models.py
+    │   │   ├── views.py
+    │   │   └── urls.py
+    │   ├── manage.py
+    │   ├── settings.py
 
 ### Funcionalidad
 El proyecto incluye las siguientes vistas:
