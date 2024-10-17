@@ -12,7 +12,7 @@ Instalación
 
 ### Clona el repositorio:
 
-git clone https://github.com/tu-usuario/django-crud.git
+git clone [https://github.com/franciscapr/todoapp.git]
 cd django-crud
 
 ### Crea un entorno virtual y actívalo:
